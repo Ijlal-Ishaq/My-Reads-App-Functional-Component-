@@ -14,9 +14,9 @@ const App = () => {
     const[read,setRead] = useState(window.localStorage.getItem('read') !==null ? JSON.parse(window.localStorage.getItem('read')) : []);
 
 
-    const move_to=(e,book)=>{
+    const move_to=(e,book,key)=>{
 
-        SaveLocal.save(e,book,setCurrentlyReading,setWantToRead,setRead)
+        SaveLocal.save(e,book,key,setCurrentlyReading,setWantToRead,setRead)
 
     }
 
